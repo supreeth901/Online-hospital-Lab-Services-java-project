@@ -1,0 +1,10 @@
+select * from TBL_PROJECT2_LAB_SCHEDULE
+select * from TBL_PROJECT2_LABSERVICES
+
+insert into TBL_PROJECT2_LAB_SCHEDULE values(1001,to_date('07:00:00', 'HH24:Mi:SS'),to_date('07:00:00', 'HH24:Mi:SS'),to_date('2015-02-20','YYYY-MM-DD'),'available','blood_1007');
+
+insert into TBL_PROJECT2_LAB_SCHEDULE values(1002,to_date('09:00:00', 'HH24:Mi:SS'),to_date('10:00:00', 'HH24:Mi:SS'),to_date('2015-02-20','YYYY-MM-DD'),'available','blood_1007');
+
+insert into TBL_PROJECT2_LAB_SCHEDULE values(1003,to_date('11:00:00', 'HH24:Mi:SS'),to_date('12:00:00', 'HH24:Mi:SS'),to_date('2015-02-20','YYYY-MM-DD'),'available','blood_1007');
+
+insert into TBL_PROJECT2_LAB_SCHEDULE values(1004,to_date('14:00:00', 'HH24:Mi:SS'),to_date('15:00:00', 'HH24:Mi:SS'),to_date('2015-02-20','YYYY-MM-DD'),'available','blood_1007');

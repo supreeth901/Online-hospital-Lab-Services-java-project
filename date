@@ -1,0 +1,17 @@
+select * from TBL_PROJECT2_LAB_SCHEDULE
+
+
+create sequence testcodeSeq
+start with 1000
+increment by 1
+
+create sequence LabId_seq
+start with 1000
+increment by 1
+
+
+create sequence slotidSeq
+start with 1000
+increment by 1
+
+select starttime,endtime from TBL_PROJECT2_LAB_SCHEDULE where testcode='blood_1001' AND schedule_date=To_Date('2015-10-19','yyyy-MM-dd')

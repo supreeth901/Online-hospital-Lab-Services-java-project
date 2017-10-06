@@ -1,0 +1,59 @@
+
+create table tbl_project2_LSP
+(
+labID number(9) primary key,
+password varchar2(15),
+labName varchar2(30) not null,
+address varchar2(100) not null,
+zip number(10) not null,
+city varchar2(50),
+state varchar2(50),
+contactNo number(10)not null unique,
+alter_ContactNo number(10),
+email varchar2(50) not null,
+security_question varchar2(100) not null,
+security_answer varchar2(100) not null,
+category varchar2(10) not null
+);
+
+
+
+create table tbl_project2_LabServices
+(
+testCode varchar2(10) primary key, 
+testName varchar2(30) not null,
+testDescription varchar2(100) not null,
+testDuration number(6) not null,
+testCost number(10) not null,
+labHome varchar2(10) not null,
+labID Number(9),
+foreign key (labID) references tbl_project2_LSP(labID)
+);
+
+create sequence LabId_seq
+start with 1000
+increment by 1
+
+create table tbl_project2_Lab_Schedule
+(
+slotId number(9) primary key,
+startTime timestamp not null,
+endTime timestamp not null,
+schedule_Date Date not null,
+status varchar2(10),
+testCode varchar2(10),
+foreign key (testCode) references tbl_project2_LabServices(testCode)
+);
+
+
+create table tbl_project2_admin
+(
+adminID number(9) primary key,
+password varchar2(15),
+security_question varchar2(100) not null,
+security_answer varchar2(100) not null
+);
+
+create sequence testcodeSeq
+start with 1000
+increment by 1
